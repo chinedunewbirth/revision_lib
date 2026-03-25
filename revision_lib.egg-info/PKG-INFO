@@ -2,7 +2,7 @@ Metadata-Version: 2.4
 Name: revision_lib
 Version: 0.1.0
 Summary: Automate Python library upgrades and check version compatibility
-Author: chinedunewbirth
+Author-email: chinedunewbirth <chineduchukwuemekamaziuk@gmail.com>
 License: MIT
 Project-URL: Homepage, https://github.com/chinedunewbirth/revision_lib
 Project-URL: Repository, https://github.com/chinedunewbirth/revision_lib
