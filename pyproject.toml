@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "revision_lib"
+version = "0.1.0"
+description = "Automate Python library upgrades and check version compatibility"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "chinedunewbirth"},
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: System :: Systems Administration",
+]
+keywords = ["upgrade", "compatibility", "dependency", "version", "pip"]
+dependencies = [
+    "packaging>=21.0",
+    "requests>=2.25.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+]
+
+[project.scripts]
+revision = "revision_lib.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/chinedunewbirth/revision_lib"
+Repository = "https://github.com/chinedunewbirth/revision_lib"
+Issues = "https://github.com/chinedunewbirth/revision_lib/issues"
+
+[tool.setuptools.packages.find]
+include = ["revision_lib*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
